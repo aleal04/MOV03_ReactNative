@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Stopwatch } from 'react-native-stopwatch-timer';
-import { SafeAreaView, StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, TouchableHighlight , Button } from 'react-native';
 
 export default () => {
   const [isStopwatchStart, setIsStopwatchStart] = useState(false);
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     fontWeight: 'bold',
     fontSize: 25,
+    color: 'white'
   },
 });
 
@@ -82,10 +83,11 @@ const options = {
     borderRadius: 5,
     width: 300,
     alignItems: 'center',
+    
   },
   text: {
     fontSize: 45,
-    color: '#FFF',
+    color:'black',
     marginLeft: 7,
   },
 };
