@@ -6,6 +6,7 @@ import { Navigator } from './Tabs1';
 
 import Icon from "react-native-vector-icons/Ionicons";
 import { Tab2View } from './Tabs2';
+import { Tab3View } from './Tabs3';
 
 const Tab = createBottomTabNavigator();
 
@@ -42,8 +43,7 @@ export const Tabs = () => {
                         size={ 25 } 
                         name='list-outline'
                     />)
-            }}
-            
+            }}            
         />
         <Tab.Screen 
             name="SearchView" 
@@ -56,6 +56,20 @@ export const Tabs = () => {
                         color={color} 
                         size={ 25 } 
                         name='search-outline'
+                    />)
+            }}
+        />
+        <Tab.Screen 
+            name="TrainerView" 
+            component={ Tab3View } 
+            options={{ 
+                headerShown: false ,
+                tabBarLabel: "Entrenadores" ,
+                tabBarIcon:({ color }) => (
+                    <Icon 
+                        color={color} 
+                        size={ 25 } 
+                        name='person-outline'
                     />)
             }}
         />

@@ -114,8 +114,8 @@ export const PokemonDetails = ( {pokemon}: Props ) => {
                 </View>
             </View>
 
-            <View style={ styles.container }>
-                <Text style={ styles.title } >Stats</Text>
+            <View style={{ ...styles.container , marginBottom: 50 }}>
+                <Text style={{ ...styles.title  }} >Stats</Text>
                 <View>
                     {
                         pokemon.stats.map( ( stat ) => (
@@ -146,13 +146,10 @@ export const PokemonDetails = ( {pokemon}: Props ) => {
                 </View>
 
                 <View style={{ 
-                    marginBottom: 20 , 
+                    marginBottom: 40 , 
                     alignItems: 'center'
                  }}>
-                     <FadeInImage 
-                        uri={ pokemon.sprites.front_default }
-                        style={ styles.basicSprite }
-                    />
+                     
                 </View>
 
                 

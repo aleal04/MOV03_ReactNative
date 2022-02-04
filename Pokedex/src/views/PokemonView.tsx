@@ -82,8 +82,7 @@ const styles = StyleSheet.create({
         height: 350 , 
         zIndex:999,
         alignItems: 'center',
-        borderBottomRightRadius:1000,
-        borderBottomLeftRadius:1000,
+        
     },
     backButton:{
         position:'absolute',

@@ -9,7 +9,7 @@ export const usePokemonSearch = () => {
 
 
     const loadPokemons = async() => {
-        const response = await PokemonApi.get<PokemonPaginatedResponse>( 'https://pokeapi.co/api/v2/pokemon?limit=1200' );
+        const response = await PokemonApi.get<PokemonPaginatedResponse>( 'https://pokeapi.co/api/v2/pokemon?limit=151' );
         mapPokemonListToSimplePokemon( response.data.results );
     }
 

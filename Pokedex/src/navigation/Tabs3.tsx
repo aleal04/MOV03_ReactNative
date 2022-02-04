@@ -7,20 +7,20 @@ import { RootStackParams } from "./Tabs1";
 import { TrainerView } from "../views/TrainerView";
 
 
-const Tab2 = createStackNavigator<RootStackParams>();
+const Tab3 = createStackNavigator<RootStackParams>();
 
-export const Tab2View = () => {
+export const Tab3View = () => {
   return (
-    <Tab2.Navigator
+    <Tab3.Navigator
     screenOptions={{ 
       headerShown: false ,
       cardStyle: {
         backgroundColor: 'white'
       }
      }}>
-      <Tab2.Screen name="HomeView" component={ SearchView } />
-      <Tab2.Screen name="PokemonView" component={ PokemonView } />
-      <Tab2.Screen name="TrainerView" component={ TrainerView } />
-    </Tab2.Navigator>
+      <Tab3.Screen name="HomeView" component={ TrainerView } />
+      <Tab3.Screen name="PokemonView" component={ PokemonView } />
+      <Tab3.Screen name="TrainerView" component={ TrainerView } />
+    </Tab3.Navigator>
   );
 }
