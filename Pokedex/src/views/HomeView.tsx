@@ -37,12 +37,6 @@ export const HomeView = () => {
                         }}>Pokédex</Text>
                     )}
                     renderItem={ ({ item  }) => (  <PokemonCard pokemon={ item } />)}
-
-                    /*  <FadeInImage 
-                            uri={ item.picture }
-                            style = {{ width: 100 , height: 100 }}
-                        /> */
-
                     onEndReached={ loadPokemons }
                     onEndReachedThreshold={ 0.4 }
 

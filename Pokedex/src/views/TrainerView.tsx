@@ -8,12 +8,15 @@ import { styles as GlobalStyles } from "../theme/appTheme";
 import { useSelector } from 'react-redux';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { ModalTrainerForm } from './ModalTrainerForm';
+import { useNavigation } from '@react-navigation/native';
 
 
 export const TrainerView = () => {
 
     const { top } = useSafeAreaInsets();
 
+    const navigation = useNavigation();
+    
     const data = useSelector(state => state);
     const [showModal , setShowModal] = useState(false);
     const trainers = data.trainerList;
@@ -36,6 +39,12 @@ export const TrainerView = () => {
                     )}
                     data={trainers}
                     renderItem={ ({item}) => 
+                    <TouchableOpacity
+                        onPress={                             
+                            () => navigation.navigate('TrainerView' , { infoTrainer : item })  
+                        }
+                    >
+                
                         <View 
                             style={{ 
                                 flexDirection:'row' , padding: 20 , marginBottom: 20 , borderRadius: 12 , 
@@ -54,6 +63,8 @@ export const TrainerView = () => {
 
                             
                         </View>
+
+                    </TouchableOpacity>
                         
                         
                     }
@@ -91,9 +102,10 @@ export const TrainerView = () => {
                             backgroundColor: '#FFFFFF' ,  
                         }}
                     >
+                        
                         <View
                             style={{ 
-                                height:'10%',
+                                height:'8%',
                                 width:'100%' ,                                
                                 flexDirection: 'row' ,
                                 alignItems: 'center' ,
@@ -112,6 +124,10 @@ export const TrainerView = () => {
                                 />
                             </TouchableOpacity>
 
+                        </View>
+
+                        <View style={{ alignItems: 'center', marginBottom: 20}}>
+                            <Text style={{ fontSize: 35 , fontWeight: 'bold' }}>Nuevo entrenador</Text>
                         </View>
 
                         <ModalTrainerForm />
